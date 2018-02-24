@@ -1,0 +1,75 @@
+html {
+  font-family: $font-primary;
+  font-weight: $font-light;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  @include font-size(14, 18);
+  font-weight: 300;
+  color: $font-color-primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  @include font-size(32, 44);
+  font-family: $font-secondary;
+}
+
+h2 {
+  @include font-size(30, 39);
+  font-family: $font-secondary;
+}
+
+h3 {
+  @include font-size(26, 39);
+  font-family: $font-secondary;
+}
+
+h4 {
+  @include font-size(20, 27);
+  font-family: $font-secondary;
+}
+
+h5 {
+  @include font-size(16, 24);
+  font-family: $font-secondary;
+}
+
+h6 {
+  @include font-size(14, 24);
+  font-family: $font-secondary;
+}
+
+p,
+li {
+  @include font-size(14, 24);
+}
+
+a {
+  @include font-size(14, 24);
+}
+
+a {
+  color: $font-color-primary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-color-primary;
+  }
+}
+
+.wysiwyg {
+  h1, h2, h3, h4, h5, h6 {
+    @include addREM(margin-bottom, 15);
+  }
+
+  p, li {
+    @include addREM(margin-bottom, 10);
+  }
+}

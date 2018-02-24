@@ -1,0 +1,17 @@
+@media (max-width: @sm-screen) {
+    @import "xs-navigation.less";
+    @import "xs-layout.less";
+    @import "xs-header.less";
+}
+@media (min-width: @sm-screen) {
+    nav {
+     &#global-nav {
+      display: block !important;   
+     }
+    }
+    #panels {
+        ul {
+            display: block !important;
+        }   
+    }
+}

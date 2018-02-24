@@ -1,0 +1,15 @@
+.cta {
+  overflow: hidden;
+}
+
+//only over 991px
+@media (min-width: 992px) {
+  .cta__overide-grid-position {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+  }
+}

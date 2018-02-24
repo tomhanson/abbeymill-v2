@@ -1,0 +1,51 @@
+.flexslider {
+  border: none;
+  .margin(0);
+}
+.flex-direction-nav {
+  a {
+    &:before {
+      font-size: 30px;
+    }
+  }
+}
+.flexslider {
+  .slides {
+    img {
+      max-height: 450px;
+      width: auto !important;
+      margin: auto;
+    }
+  }
+}
+/*Override Bootstrap Modal*/
+.modal-dialog {
+  width: 98%;
+  margin: 10px auto;
+}
+.modal.fade .modal-dialog {
+  .transform( translate(0, 0) );
+}
+.modal-header {
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: none;
+  background-color: @second-font-color;
+  .padding(15, 15, 0, 15);
+  button {
+    border: none;
+    background-color: white;
+    .font-size(30);
+    .padding(0, 0, 0, 5);
+    cursor: pointer;
+  }
+}
+.modal-content {
+  .box-shadow(none);
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  .border-radius(0);
+}

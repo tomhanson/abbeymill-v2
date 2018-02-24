@@ -1,0 +1,19 @@
+ip: 192.168.10.12
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/tomhanson/Desktop/repos/abbeymill-v2/site
+        to: /home/vagrant/code/site
+sites:
+    -
+        map: abbeymill-latest.test
+        to: /home/vagrant/code/site
+databases:
+    - abbeymill
+name: abbeymill
+hostname: abbeymill

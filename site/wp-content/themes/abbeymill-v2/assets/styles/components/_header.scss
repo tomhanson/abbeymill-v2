@@ -1,0 +1,13 @@
+.header--primary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 114px;
+  z-index: 10;
+  @include addREM(padding, 30);
+}
+
+.header-padding {
+  @include addREM(padding-top, 114);
+}

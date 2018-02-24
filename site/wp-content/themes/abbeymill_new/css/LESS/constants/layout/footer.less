@@ -1,0 +1,33 @@
+/*Sticky Footer*/
+
+.sticky-footer {
+ position: relative;
+ .padding-bottom(21);
+    min-height: 100%;
+}
+
+footer {
+    background-color: @primary-color;
+    width: 100%;
+    position: absolute;
+    z-index: 600;
+    bottom: 0;
+    .copyright {
+        text-align: right;   
+    }
+}
+.homepage, .properties-page {
+    position: relative;
+   footer {
+    position: absolute;   
+    bottom: 0;
+   }
+}
+.copyright {
+    p {
+      float: right;
+        &:first-child {
+            float: left;   
+        }
+    }
+}

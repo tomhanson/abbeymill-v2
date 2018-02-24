@@ -1,0 +1,16 @@
+.logo {
+  color: $font-color-secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $font-color-secondary;
+  }
+}
+
+.logo__text {
+  font-family: $font-primary;
+  @include addREM(padding-left, 10);
+  @include font-size(20, 24);
+}

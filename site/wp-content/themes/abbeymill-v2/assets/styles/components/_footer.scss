@@ -1,0 +1,4 @@
+.footer__border {
+  border-top: 1px solid $brand-primary;
+  @include addREM(padding, 30, 0);
+}

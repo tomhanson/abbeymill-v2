@@ -1,0 +1,49 @@
+.property-square {
+  position: relative;
+  @include addREM(padding, 20);
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: 1px solid $brand-secondary;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 40px;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: $bg-overlay;
+  }
+}
+.slick-active {
+  .property-square {
+    &:after {
+      opacity: 0;
+    }
+  }
+}
+.property-square__content {
+  background-color: $brand-three;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  @include addREM(padding, 15);
+  width: 100%;
+  max-width: 310px;
+}
+
+.property-square__link {
+  color: $font-color-tertiary;
+
+  &:hover {
+    color: $font-color-tertiary;
+  }
+}
