@@ -2,9 +2,9 @@
 
 
 <style type="text/css">
-    #js-tiles .mix{
-	display: none;
-}
+    #js-tiles .mix {
+        display: none;
+    }
 </style>
 
 <div class="container">
@@ -20,8 +20,8 @@
     </div>
     <div class="row">
         <div id="js-tiles">
-        
-        <?php 
+
+            <?php 
                 $args = array( 'post_type' => 'Portfolio', 'posts_per_page' => '80' );
                        $i = 0;
                     $myposts = get_posts( $args );                   
@@ -30,24 +30,26 @@
                     $status = get_field('portfolio_type'); 
                  
                                                         ?>
-                        <div class="col-xs-6 col-sm-4 col-md-3 mix
+            <div class="col-xs-6 col-sm-4 col-md-3 mix
                                     
                                     <?php if($status == 'Internal') {
-                                        print "internal";
+                                        print " internal ";
                                     } else {
-                                        print "external";
+                                        print "external ";
                                     } ?> 
                                     ">
-                            <div class="gallery">
-                                <a href="<?php echo $image['sizes']['large']; ?>" data-lightbox="<?php echo $i; ?>"><img src="<?php echo $image['sizes']['portfolioThumb']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
-                            </div>
-                        </div>
-                        
-                   <?php $i++; ?>
+                <div class="gallery">
+                    <a href="<?php echo $image['sizes']['large']; ?>" data-lightbox="<?php echo $i; ?>">
+                        <img src="<?php echo $image['sizes']['portfolioThumb']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    </a>
+                </div>
+            </div>
 
-                   <?php endforeach; 
+            <?php $i++; ?>
+
+            <?php endforeach; 
             wp_reset_postdata(); ?>
-                
+
         </div>
     </div>
 </div>

@@ -1,0 +1,25 @@
+.btn {
+  @include addREM(padding, 10);
+  color: $font-color-secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $font-color-secondary;
+  }
+}
+
+.btn--primary {
+  background-color: $brand-four;
+  transition: 0.3s background-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($brand-four, 10%);
+  }
+}
+
+.btn--secondary {
+  border: 1px solid $brand-three;
+}

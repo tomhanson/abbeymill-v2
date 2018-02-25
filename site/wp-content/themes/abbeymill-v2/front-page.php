@@ -36,26 +36,17 @@
             // $myposts = get_field('home_fields');                   
             $myposts = new WP_Query( $args );       
             while ( $myposts->have_posts() ) : $myposts->the_post();
-            $image = get_field('main_photo'); 
             ?>
             <li>
-              <div class="property-square">
-                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php the_title(); ?>">
-                <div class="property-square__content">
-                  <h3 class="spacing-sm--btm-only">
-                    <?php the_title(); ?>
-                  </h3>
-                  <h6 class="spacing-sm--btm-only">
-                    <?php the_field('property_address'); ?>
-                  </h6>
-                  <a href="<?php the_permalink(); ?>" class="property-square__link">
-                    <h5>View</h5>
-                  </a>
-                </div>
-              </div>
+              <?php get_template_part('templates/content', 'tile-primary'); ?>
             </li>
             <?php endwhile; wp_reset_postdata(); ?>
         </ul>
+        <div class="text-center | spacing-md--top-only spacing-lg--btm-only">
+          <a href="/our-properties" class="btn btn--primary">
+            View all properties
+          </a>
+        </div>
       </div>
     </div>
   </div>

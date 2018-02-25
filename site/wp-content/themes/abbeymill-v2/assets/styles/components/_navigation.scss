@@ -69,8 +69,8 @@ html.nav-open,
 
 .nav__close {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 35px;
+  left: 65px;
   @include font-size(30, 30);
   border: none;
   background-color: transparent;

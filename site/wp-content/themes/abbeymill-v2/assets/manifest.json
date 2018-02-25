@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "main.js": {
-      "files": ["scripts/main.js", "scripts/slick.js"],
+      "files": ["scripts/main.js", "scripts/slick.js", "scripts/mixitup.js"],
       "main": true
     },
     "main.css": {

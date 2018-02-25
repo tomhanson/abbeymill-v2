@@ -1,0 +1,58 @@
+.basic-tile {
+  @include addREM(margin-bottom, 30);
+  position: relative;
+
+  &:hover {
+    .basic-tile__overlay {
+      opacity: 1;
+      top: 30px;
+      left: 45px;
+      right: 45px;
+      bottom: 30px;
+    }
+
+    .basic-tile__img {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.basic-tile__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.basic-tile__overlay {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  right: 35px;
+  bottom: 20px;
+  border: 1px solid $brand-secondary;
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.basic-tile__img {
+  img {
+    vertical-align: middle;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: $bg-overlay;
+    opacity: 0;
+    transition: 0.3s opacity;
+  }
+}

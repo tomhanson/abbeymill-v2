@@ -1,11 +1,23 @@
+.home {
+  .logo {
+    color: $font-color-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $font-color-secondary;
+    }
+  }
+}
 .logo {
-  color: $font-color-secondary;
+  color: $font-color-primary;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $font-color-secondary;
+    color: $font-color-primary;
   }
 }
 

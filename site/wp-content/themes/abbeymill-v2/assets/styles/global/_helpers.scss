@@ -45,6 +45,12 @@
 
 .secondary-font-color {
   color: $font-color-secondary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-color-secondary;
+  }
 }
 
 //brand backgrounds
@@ -100,4 +106,17 @@
 
 .spacing-sm--btm-only {
   @include addREM(padding-bottom, 20);
+}
+
+.spacing-xs {
+  @include addREM(padding-top, 10);
+  @include addREM(padding-bottom, 10);
+}
+
+.spacing-xs--top-only {
+  @include addREM(padding-top, 10);
+}
+
+.spacing-xs--btm-only {
+  @include addREM(padding-bottom, 10);
 }

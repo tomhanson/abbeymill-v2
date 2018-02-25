@@ -11,3 +11,13 @@
 .header-padding {
   @include addREM(padding-top, 114);
 }
+
+.home {
+  .header__nav-toggle {
+    color: $font-color-secondary;
+  }
+}
+
+.header__nav-toggle {
+  color: $font-color-primary;
+}

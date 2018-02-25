@@ -39,7 +39,9 @@ function setup() {
   add_theme_support('post-thumbnails');
 
   add_image_size('img-xs', 200, 9999);
-  add_image_size('img-property-square', 808, 538, true);
+  add_image_size('img-property-tile', 1000, 550, true);
+  add_image_size('img-property-tile-sq', 600, 400, true);
+  add_image_size('img-portfolio', 400, 310, true);
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats

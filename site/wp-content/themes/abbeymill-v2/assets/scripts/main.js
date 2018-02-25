@@ -44,26 +44,26 @@
           centerMode: true,
           centerPadding: '50px',
           slidesToShow: 1,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1,
-              },
-            },
-          ],
+          // responsive: [
+          //   {
+          //     breakpoint: 768,
+          //     settings: {
+          //       arrows: false,
+          //       centerMode: true,
+          //       centerPadding: '40px',
+          //       slidesToShow: 3,
+          //     },
+          //   },
+          //   {
+          //     breakpoint: 480,
+          //     settings: {
+          //       arrows: false,
+          //       centerMode: true,
+          //       centerPadding: '40px',
+          //       slidesToShow: 1,
+          //     },
+          //   },
+          // ],
         });
 
         $('.testimonial-slider').slick({
@@ -76,9 +76,12 @@
       },
     },
     // About us page, note the change from about-us to about_us.
-    about_us: {
+    our_portfolio: {
       init: function() {
         // JavaScript to be fired on the about us page
+        var containerEl = document.querySelector('#js-tiles');
+
+        var mixer = mixitup(containerEl);
       },
     },
   };
