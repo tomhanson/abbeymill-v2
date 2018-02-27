@@ -24,7 +24,7 @@
             <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-dark.png" alt="<?php bloginfo('name'); ?>">
 
             <?php } ?>
-            <h1 class="logo__text">
+            <h1 class="hidden-xs | logo__text">
               <?php bloginfo('name'); ?>
             </h1>
           </a>

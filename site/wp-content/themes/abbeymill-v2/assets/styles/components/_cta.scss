@@ -1,6 +1,10 @@
 .cta {
   overflow: hidden;
-  @include addREM(padding-top, 15);
+}
+
+.cta__content {
+  @include addREM(padding-top, 65);
+  @include addREM(padding-bottom, 65);
 }
 
 //only over 991px
@@ -13,5 +17,16 @@
     bottom: 0;
     width: 50%;
     padding-top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .cta {
+    @include addREM(padding-top, 15);
+  }
+
+  .cta__content {
+    @include addREM(padding-top, 20);
+    @include addREM(padding-bottom, 20);
   }
 }

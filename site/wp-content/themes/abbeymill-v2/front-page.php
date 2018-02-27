@@ -6,8 +6,14 @@
         <h1 class="secondary-font-color">
           <?php the_field('home_banner_headline'); ?>
         </h1>
+        <div class="spacing-sm--top-only | play-icon">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/play-icon.svg" alt="Play Video">
+        </div>
       </div>
     </div>
+  </div>
+  <div class="down-arrow">
+    <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/down-arrow.svg" alt="Play Video">
   </div>
 </section>
 <section id="section:content-block" class="spacing-lg | content-block content-block--secondary">
@@ -59,8 +65,8 @@
           <?php $img = get_field('home_content_image'); ?>
           <img src="<?php echo $img['sizes']['large']; ?>" alt="alt tag">
         </div>
-        <div class="col-md-6 col-md-offset-6 col-lg-5 col-lg-offset-7">
-          <div class="wysiwyg | spacing-lg">
+        <div class="col-md-6 col-md-offset-6 col-lg-5 col-lg-offset-7 | cta__content">
+          <div class="wysiwyg">
             <h2>
               <?php the_field('home_bottom_content_headline'); ?>
             </h2>

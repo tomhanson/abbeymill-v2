@@ -21,3 +21,14 @@
 .header__nav-toggle {
   color: $font-color-primary;
 }
+
+@media (max-width: 767px) {
+  .header--primary {
+    @include addREM(padding, 15, 0);
+    height: 84px;
+  }
+
+  .header-padding {
+    @include addREM(padding-top, 84);
+  }
+}

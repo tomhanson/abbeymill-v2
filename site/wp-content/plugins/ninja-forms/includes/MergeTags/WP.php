@@ -71,12 +71,14 @@ final class NF_MergeTags_WP extends NF_Abstracts_MergeTags
             }
         }
 
+        // Check to ensure our user is logged in. If not don't return.
+        if( is_user_logged_in() ) {
         /**
          * Replace Custom User Meta
          * {user_meta:foo} --> meta key is 'foo'
          */
         preg_match_all( "/{user_meta:(.*?)}/", $subject, $user_meta_matches );
-        if( ! empty( $user_meta_matches[0] ) && $user_id = get_current_user_id() ) {
+        if( ! empty( $user_meta_matches[0] ) && $user_id = get_current_user_id()  ) {
             /**
              * $matches[0][$i]  merge tag match     {user_meta:foo}
              * $matches[1][$i]  captured meta key   foo
@@ -87,8 +89,8 @@ final class NF_MergeTags_WP extends NF_Abstracts_MergeTags
                 $subject = str_replace( $search, $meta_value, $subject );
             }
         }
-
-      return parent::replace( $subject );
+        return parent::replace( $subject );
+        }
     }
 
     protected function post_id()
