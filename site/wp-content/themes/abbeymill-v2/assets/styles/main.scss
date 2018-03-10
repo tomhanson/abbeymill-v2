@@ -1,8 +1,6 @@
 //vendor files
-
-@import 'vendor/bootstrap/assets/stylesheets/bootstrap';
-@import 'vendor/slick';
-
+@import '_vendor/bootstrap/assets/stylesheets/bootstrap';
+@import '_vendor/slick';
 //global variables and mixins
 @import 'global/_reset';
 @import 'global/_variables';
@@ -15,10 +13,7 @@
 @import 'global/forms';
 @import 'global/buttons';
 //end globals
-
 //components
-
 @import 'components/main';
-
 //last minute over rides - should be empty but just in case
 @import 'global/_overrides';

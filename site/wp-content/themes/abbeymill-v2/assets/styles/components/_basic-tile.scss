@@ -1,7 +1,6 @@
 .basic-tile {
   @include addREM(margin-bottom, 30);
   position: relative;
-
   &:hover {
     .basic-tile__overlay {
       opacity: 1;
@@ -10,7 +9,6 @@
       right: 45px;
       bottom: 30px;
     }
-
     .basic-tile__img {
       &:before {
         opacity: 1;
@@ -25,6 +23,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  h3 {
+    line-height: 1.2;
+  }
 }
 
 .basic-tile__overlay {
@@ -37,13 +38,13 @@
   border: 1px solid $brand-secondary;
   opacity: 0;
   transition: 0.3s all;
+  @include addREM(padding, 15);
 }
 
 .basic-tile__img {
   img {
     vertical-align: middle;
   }
-
   &:before {
     content: '';
     position: absolute;

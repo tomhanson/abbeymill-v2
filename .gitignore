@@ -4,3 +4,5 @@ homestead/after.sh
 
 site/wp-content/uploads
 node_modules/
+
+assets

@@ -26,3 +26,26 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+add_action( 'wp_ajax_my_action', 'my_action' );
+add_action( 'wp_ajax_nopriv_my_action', 'my_action' );
+
+function my_action() {
+  $args = array(   
+    'post_type' => 'properties', 
+    'posts_per_page'   => 10, 
+    'paged' => $_POST['page'],
+    'meta_query' => array(
+      array(
+        'key'     => 'property_status',
+        'value'   => $_POST['type'],
+        'compare' => 'IN',
+      ),
+    ),
+  );
+  // $myposts = get_field('home_fields');                   
+  $myposts = new WP_Query( $args );       
+  while ( $myposts->have_posts() ) : $myposts->the_post();
+    get_template_part('templates/ajax-content', 'tile-primary');
+  endwhile; wp_die(); // this is required to terminate immediately and return a proper response }
+}

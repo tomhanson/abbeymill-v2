@@ -1,3 +1,31 @@
 .mix-it-up__wrap {
   overflow: hidden;
 }
+
+.mix-it-up__filters {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.mix-it-up__filter {
+  display: inline-block;
+  cursor: pointer;
+  @include addREM(padding, 10);
+  position: relative;
+  &:after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: $brand-four;
+    width: 100%;
+    display: block;
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

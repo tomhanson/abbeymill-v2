@@ -41,7 +41,9 @@ function setup() {
   add_image_size('img-xs', 200, 9999);
   add_image_size('img-property-tile', 1000, 550, true);
   add_image_size('img-property-tile-sq', 600, 400, true);
-  add_image_size('img-portfolio', 400, 310, true);
+  add_image_size('img-portfolio', 500, 390, true);
+  add_image_size('img-portfolio-retina', 1000, 780, true);
+  add_image_size('bg-img-lg', 2000, 9999, false);
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats

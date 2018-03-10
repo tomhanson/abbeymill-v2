@@ -1,5 +1,6 @@
+<?php $banner = get_field('home_banner_image'); ?>
 <section id="section:banner" class="flex align-center justify-center | header-padding bg-image | banner banner--primary"
-  style="background-image: url('<?php the_field('home_banner_image'); ?>');">
+  style="background-image: url('<?php echo $banner['sizes']['bg-img-lg'];  ?>');">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 | text-center | banner__headline">
@@ -12,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="down-arrow">
+  <div id="js-home-scroll" class="down-arrow">
     <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/down-arrow.svg" alt="Play Video">
   </div>
 </section>
@@ -32,21 +33,18 @@
     <div class="row">
       <div class="col-xs-12">
         <ul class="home-slider">
+          <?php while( have_rows('home_properties') ) : the_row(); ?>
           <?php
-            $args = array(   'post_type' => 'properties', 
-            'category' => '3',
-            'posts_per_page'   => 10, 
-            'orderby' => 'menu_order', 
-            'order' => 'ASC', 
-            );
-            // $myposts = get_field('home_fields');                   
-            $myposts = new WP_Query( $args );       
-            while ( $myposts->have_posts() ) : $myposts->the_post();
-            ?>
+            $post_object = get_sub_field('property');
+              // override $post
+              $post = $post_object;
+              setup_postdata( $post ); 
+
+              ?>
             <li>
               <?php get_template_part('templates/content', 'tile-primary'); ?>
             </li>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <?php wp_reset_postdata(); endwhile; ?>
         </ul>
         <div class="text-center | spacing-md--top-only spacing-lg--btm-only">
           <a href="/our-properties" class="btn btn--primary">
@@ -61,9 +59,10 @@
   <div class="max-width-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 | cta__overide-grid-position">
-          <?php $img = get_field('home_content_image'); ?>
-          <img src="<?php echo $img['sizes']['large']; ?>" alt="alt tag">
+        <?php $img = get_field('home_content_image'); ?>
+        <div class="col-md-6 | bg-image bg-image--no-overlay | cta__overide-grid-position" style="background-image: url(<?php echo $img['sizes']['large']; ?>);">
+
+          <!-- <img src="<?php echo $img['sizes']['large']; ?>" alt="alt tag"> -->
         </div>
         <div class="col-md-6 col-md-offset-6 col-lg-5 col-lg-offset-7 | cta__content">
           <div class="wysiwyg">

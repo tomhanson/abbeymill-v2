@@ -70,9 +70,6 @@ final class NF_MergeTags_WP extends NF_Abstracts_MergeTags
                 }
             }
         }
-
-        // Check to ensure our user is logged in. If not don't return.
-        if( is_user_logged_in() ) {
         /**
          * Replace Custom User Meta
          * {user_meta:foo} --> meta key is 'foo'
@@ -90,7 +87,6 @@ final class NF_MergeTags_WP extends NF_Abstracts_MergeTags
             }
         }
         return parent::replace( $subject );
-        }
     }
 
     protected function post_id()

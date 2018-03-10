@@ -1,7 +1,6 @@
-.home {
+.home .header--primary {
   .logo {
     color: $font-color-secondary;
-
     &:hover,
     &:active,
     &:focus {
@@ -10,9 +9,9 @@
     }
   }
 }
+
 .logo {
   color: $font-color-primary;
-
   &:hover,
   &:active,
   &:focus {

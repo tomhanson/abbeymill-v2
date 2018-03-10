@@ -3,7 +3,7 @@ Contributors: wpninjasllc, kstover, jameslaws, kbjohnson90, klhall1987, krmoorho
 Tags: form, forms, contact form, custom form, form builder, form creator, form manager, form creation, contact forms, custom forms, forms builder, forms creator, forms manager, forms creation, form administration,
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 3.2.15
+Stable tag: 3.2.16
 License: GPLv2 or later
 
 Drag and drop fields in an intuitive UI to create contact forms, email subscription forms, order forms, payment forms, send emails and more!
@@ -111,7 +111,7 @@ For help and video tutorials, please visit our website: [Ninja Forms Documentati
 
 == Upgrade Notice ==
 
-= 3.2.15 (26 February 2018) =
+= 3.2.16 (27 February 2018) =
 
 *Security:*
 
@@ -121,8 +121,9 @@ For help and video tutorials, please visit our website: [Ninja Forms Documentati
 
 * Fixed an issue that was sometimes causing decimal place values to not be honored in calculations after submission.
 * Parts should now properly validate individually if the option is enabled in the Multi-part Forms add-on settings.
-* User meta merge tags should no longer display at all for logged out users.
 * Resolved an issue that was causing the star rating field's label setting to be uneditable.
+* Fixed a bug that was sometimes causing no actions to fire upon form submission.
+* Resolved an issue that was causing hidden fields to be visible if they contained a calculated value.
 
 *Changes:*
 
@@ -130,6 +131,13 @@ For help and video tutorials, please visit our website: [Ninja Forms Documentati
 * Added a form filter to submissions and exports, allowing for more rapid selection of the intended form.
 
 == Changelog ==
+
+= 3.2.16 (27 February 2018) =
+
+*Bugs:*
+
+* Fixed a bug that was sometimes causing no actions to fire upon form submission.
+* Resolved an issue that was causing hidden fields to be visible if they contained a calculated value.
 
 = 3.2.15 (26 February 2018) =
 

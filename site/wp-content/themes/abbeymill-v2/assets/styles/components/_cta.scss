@@ -20,11 +20,13 @@
   }
 }
 
-@media (max-width: 991px) {
-  .cta {
-    @include addREM(padding-top, 15);
+@media(max-width: 767px) {
+  .cta__overide-grid-position {
+    height: 200px;
   }
+}
 
+@media (max-width: 991px) {
   .cta__content {
     @include addREM(padding-top, 20);
     @include addREM(padding-bottom, 20);

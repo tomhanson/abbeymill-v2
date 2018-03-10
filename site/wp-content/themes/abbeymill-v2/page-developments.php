@@ -12,7 +12,7 @@
     </div>
   </div>
 </section>
-<section id="section:properties" class="js-infinite-scroll-sold">
+<section id="section:properties" class="js-infinite-scroll-dev">
   <div class="loader">&nbsp;</div>
   <div class="container">
     <div class="row | js-property-data">
@@ -26,7 +26,7 @@
                 'meta_query' => array(
                   array(
                     'key'     => 'property_status',
-                    'value'   => 'Sold',
+                    'value'   => 'Development',
                     'compare' => 'IN',
                   ),
                 ),
@@ -40,6 +40,7 @@
           </div>
           <?php endwhile; ?>
       </div>
+
     </div>
   </div>
 </section>

@@ -5,6 +5,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   @include font-size(14, 18);
   font-weight: 300;
@@ -54,9 +55,42 @@ a {
   @include font-size(14, 24);
 }
 
+@media(max-width: 767px) {
+  h1 {
+    @include font-size(24, 34);
+    font-family: $font-secondary;
+  }
+  h2 {
+    @include font-size(22, 30);
+    font-family: $font-secondary;
+  }
+  h3 {
+    @include font-size(20, 26);
+    font-family: $font-secondary;
+  }
+  h4 {
+    @include font-size(18, 24);
+    font-family: $font-secondary;
+  }
+  h5 {
+    @include font-size(16, 24);
+    font-family: $font-secondary;
+  }
+  h6 {
+    @include font-size(14, 24);
+    font-family: $font-secondary;
+  }
+  p,
+  li {
+    @include font-size(14, 24);
+  }
+  a {
+    @include font-size(14, 24);
+  }
+}
+
 a {
   color: $font-color-primary;
-
   &:hover,
   &:focus,
   &:active {
@@ -65,11 +99,16 @@ a {
 }
 
 .wysiwyg {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include addREM(margin-bottom, 15);
   }
-
-  p, li {
+  p,
+  li {
     @include addREM(margin-bottom, 10);
   }
 }

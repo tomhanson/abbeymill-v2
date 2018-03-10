@@ -1,7 +1,6 @@
 .property-tile {
   position: relative;
   @include addREM(padding, 20);
-
   &:before {
     content: '';
     position: absolute;
@@ -12,7 +11,6 @@
     left: 40px;
     z-index: -1;
   }
-
   img {
     vertical-align: middle;
   }
@@ -39,40 +37,39 @@
     }
   }
 }
+
 .property-tile__content {
   background-color: rgba($brand-three, 0.95);
   position: absolute;
-  top: 70px;
+  top: 50px;
   left: 50px;
   @include addREM(padding, 15);
   width: 100%;
   max-width: 310px;
+  z-index: 100;
 }
 
 @media (max-width: 767px) {
   .property-tile {
     padding: 0;
-
     &:before {
       left: 0;
     }
-
     &:after {
       display: none;
     }
   }
-
   .property-tile__content {
     position: relative;
     top: 0;
     left: 0;
     max-width: 100%;
+    border: 1px solid $brand-secondary;
   }
 }
 
 .property-tile__link {
   color: $font-color-tertiary;
-
   &:hover {
     color: $font-color-tertiary;
   }
